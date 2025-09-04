@@ -13,18 +13,19 @@ export default function Hero() {
   const features = [
     { icon: Shield, text: "Segurança Garantida" },
     { icon: Clock, text: "Disponibilidade 24h" },
-    { icon: Award, text: "25 Anos de Experiência" },
+    { icon: Award, text: "25+ Anos de Experiência" },
   ];
     
     return(
         <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
-     <div
-  className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-  style={{ backgroundImage: `url(${heroImage.src})` }}
->
-  <div className="hero-overlay absolute inset-0" />
-</div>
+       <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${heroImage.src})` }}
+  >
+  <div className="absolute inset-0 bg-blue-600/40 backdrop-blur-xs" />
+    <div className="hero-overlay absolute inset-0" />
+  </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
