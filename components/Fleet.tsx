@@ -13,7 +13,7 @@ const FleetSection = () => {
     id: 1,
     category: "Guindastes Munck",
     title: "Guindaste Munck 12T",
-    subtitle: "Nosso equipamento premium",
+  subtitle: "Nosso equipamento principal",
     image: craneTruckImage,
     specs: {
       capacity: "12 toneladas",
@@ -23,7 +23,7 @@ const FleetSection = () => {
     highlights: ["4m a 12T", "27m a 500kg", "Operador Incluso"],
     features: ["Operador Incluso", "Manutenção Garantida", "Disponível 24h"],
     status: "Disponível",
-    isPremium: true
+  // isPremium removido
   };
 
   const forklifts = [
@@ -106,13 +106,7 @@ const FleetSection = () => {
           
           <div className="max-w-4xl mx-auto">
             <Card className="glass-card border-border/50 overflow-hidden group relative p-0">
-              {/* Premium badge */}
-              <div className="absolute top-6 left-6 z-20">
-                <Badge className="bg-gradient-to-r from-primary to-accent text-white font-semibold border-0 shadow-lg">
-                  <Star className="w-3 h-3 mr-1" />
-                  Premium
-                </Badge>
-              </div>
+              {/* ...premium badge removido... */}
               
               {/* Status badge */}
               <div className="absolute top-6 right-6 z-20">
@@ -187,13 +181,12 @@ const FleetSection = () => {
                   </div>
 
                   <Button 
-                    variant="cta" 
-                    size="lg"
-                    className="w-full group-hover:shadow-xl transition-all duration-300"
+                    variant="default"
+                    className="w-full group-hover:shadow-xl transition-all duration-300 mb-4"
                     onClick={() => handleWhatsAppClick(heroEquipment.title)}
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Solicitar Orçamento Premium
+                    Solicitar Orçamento
                   </Button>
                 </div>
               </div>
@@ -289,7 +282,7 @@ const FleetSection = () => {
         <div className="text-center mt-16">
           <div className="glass-card border-border/50 rounded-3xl p-8 max-w-2xl mx-auto">
             <div className="mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="font-heading font-bold text-2xl mb-4">
