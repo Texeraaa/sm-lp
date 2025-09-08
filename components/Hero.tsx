@@ -1,7 +1,7 @@
 'use client'
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Clock, Award } from "lucide-react";
-import heroImage from "@/app/assets/images/muncks.jpeg";
+import heroImage from "@/app/assets/images/empilhadeira.jpeg";
 
 
 export default function Hero() {
