@@ -7,6 +7,7 @@ import { Weight, Ruler, Gauge, Phone, Truck, Box, Star, CheckCircle } from "luci
 import Image from "next/image";
 import forkLiftImage from "@/app/assets/images/emp.jpeg";
 import craneTruckImage from "@/app/assets/images/muncks.jpeg";
+import { OperatorSelector } from "./OperatorSelector";
 
 const FleetSection = () => {
   const heroEquipment = {
@@ -179,15 +180,16 @@ const FleetSection = () => {
                       ))}
                     </ul>
                   </div>
-
+                <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento para ${heroEquipment.title}.`}>
                   <Button 
                     variant="default"
                     className="w-full group-hover:shadow-xl transition-all duration-300 mb-4"
-                    onClick={() => handleWhatsAppClick(heroEquipment.title)}
                   >
                     <Phone className="w-5 h-5 mr-2" />
                     Solicitar Orçamento
                   </Button>
+                </OperatorSelector>
+
                 </div>
               </div>
             </Card>
@@ -263,15 +265,15 @@ const FleetSection = () => {
                       ))}
                     </ul>
                   </div>
-
-                  <Button 
-                    variant="default"
-                    className="w-full group-hover:shadow-lg transition-all duration-300 mb-4"
-                    onClick={() => handleWhatsAppClick(item.title)}
-                  >
-                    <Phone className="w-4 h-4 mr-2" />
-                    Solicitar Orçamento
-                  </Button>
+                  <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento para ${item.title}.`}>
+                    <Button 
+                      variant="default"
+                      className="w-full group-hover:shadow-lg transition-all duration-300 mb-4"
+                    >
+                      <Phone className="w-4 h-4 mr-2" />
+                      Solicitar Orçamento
+                    </Button>
+                  </OperatorSelector>
                 </CardContent>
               </Card>
             ))}
@@ -293,15 +295,16 @@ const FleetSection = () => {
                 para atender suas necessidades com agilidade e qualidade.
               </p>
             </div>
-            <Button 
-              variant="cta" 
-              size="lg" 
-              className="shadow-xl hover:shadow-2xl transition-all duration-300"
-              onClick={() => handleWhatsAppClick("informações sobre nossa frota especializada")}
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Solicitar Orçamento Personalizado
-            </Button>
+              <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento.`}>
+                <Button 
+                  variant="cta" 
+                  size="lg" 
+                  className="shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Solicitar Orçamento Personalizado
+                </Button>
+              </OperatorSelector>
           </div>
         </div>
       </div>

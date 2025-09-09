@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Truck, Package, ShipWheel, ArrowRight } from "lucide-react";
+import { OperatorSelector } from "./OperatorSelector";
 
 
 export default function Services() {
@@ -102,15 +103,15 @@ export default function Services() {
                     </li>
                   ))}
                 </ul>
-
-                <Button 
-                  variant="outline" 
-                  className="w-full group-hover:border-primary group-hover:text-primary mt-auto"
-                  onClick={() => handleWhatsAppClick(service.title)}
-                >
-                  Solicitar Orçamento
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
+                <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento para ${service.title}.`}>
+                  <Button 
+                    variant="outline" 
+                    className="w-full group-hover:border-primary group-hover:text-primary mt-auto"
+                  >
+                    Solicitar Orçamento
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </OperatorSelector>
               </CardContent>
             </Card>
           ))}
