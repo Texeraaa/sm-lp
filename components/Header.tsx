@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { OperatorSelector } from './OperatorSelector';
+import Logo from '../public/SM_preto.png';
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,15 +29,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background-95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-xl">SM</span>
-            </div>
+           
             <div>
-              <h1 className="font-heading font-bold text-lg text-primary">SM Locação</h1>
-              <p className="text-xs text-muted-foreground font-body">de Máquinas</p>
+                <Image src={Logo} alt="Logo SM Locação" width={120}  className=" object-contain" />
             </div>
           </div>
 
