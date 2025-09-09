@@ -1,7 +1,8 @@
 'use client'
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Award } from "lucide-react";
+import { ArrowRight, Shield, Clock, Award, MessageCircle } from "lucide-react";
 import heroImage from "@/app/assets/images/empilhadeira.jpeg";
+import { OperatorSelector } from "./OperatorSelector";
 
 
 export default function Hero() {
@@ -49,15 +50,16 @@ export default function Hero() {
 
             <div className="fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-                <Button 
-                  variant="hero" 
-                  size="lg" 
-                  onClick={handleWhatsAppClick}
-                  className="px-8 py-4"
-                >
-                  Solicitar Orçamento
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
+                 <OperatorSelector message="Olá! Gostaria de solicitar um orçamento para locação de máquinas.">
+                  <Button 
+                    variant="hero" 
+                    size="lg" 
+                    className="px-8 py-4"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Solicitar Orçamento
+                  </Button>
+                </OperatorSelector>
                 <Button 
                   variant="outline" 
                   size="lg"

@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from "@/components/ui/button";
-import { Instagram, ExternalLink, Camera, ImageIcon } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const InstagramSection = () => {
   const handleFollowInstagram = () => {

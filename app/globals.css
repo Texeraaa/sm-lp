@@ -243,3 +243,101 @@
 .bg-accent-light {
   background-color: hsl(var(--accent) / 0.10);
 }
+/* ===== Compatibilidade com Tailwind v3: classes customizadas ===== */
+
+/* Industrial gradient overlays */
+.hero-overlay {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--primary) / 0.6));
+}
+
+/* Animation utilities */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -8px hsl(var(--primary) / 0.2);
+}
+
+/* CTA button styles */
+.cta-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, hsl(var(--accent) / 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.cta-glow:hover::before {
+  transform: translateX(100%);
+}
+
+/* Industrial section dividers */
+.industrial-divider {
+  position: relative;
+  overflow: hidden;
+}
+
+.industrial-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--accent)));
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Tokens de hover e fontes ===== */
+:root {
+  --primary-hover: 221 83% 25%;
+  --accent-hover: 45 85% 45%;
+  --font-body: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-heading: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+}
+.dark {
+  --primary-hover: 221 83% 25%;
+  --accent-hover: 45 85% 45%;
+  --font-body: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-heading: var(--font-geist-sans, ui-sans-serif, system-ui, sans-serif);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+  body {
+    font-family: var(--font-body);
+  }
+}
+
+.operator-message-btn {
+  background-color: transparent !important;
+  color: inherit !important;
+  border: 1px solid hsl(var(--input));
+}
+.operator-message-btn:hover {
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
+  border-color: hsl(var(--primary)) !important;
+}
