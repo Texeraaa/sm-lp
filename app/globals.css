@@ -341,3 +341,7 @@
   color: hsl(var(--primary-foreground)) !important;
   border-color: hsl(var(--primary)) !important;
 }
+
+.bg-primary\/10 {
+  background-color: hsl(var(--primary) / 0.10) !important;
+}
