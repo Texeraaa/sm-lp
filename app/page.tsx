@@ -1,6 +1,7 @@
 import AboutSection from "@/components/About";
 import FleetSection from "@/components/Fleet";
 import Hero from "@/components/Hero";
+import InstagramSection from "@/components/InstagramSection";
 import Services from "@/components/Services";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Services />
       <FleetSection />
       <AboutSection />
+      <InstagramSection />
     </div>
   );
 }
