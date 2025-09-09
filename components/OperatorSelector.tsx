@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
-import { Card, CardContent } from '@/components/ui/card';
-import { MessageCircle, User, Clock } from 'lucide-react';
+} from "@/components/ui/dialog";
+import { Card, CardContent } from "@/components/ui/card";
+import { MessageCircle } from "lucide-react";
 
 interface Operator {
   id: string;
@@ -27,20 +27,20 @@ interface OperatorSelectorProps {
 
 const operators: Operator[] = [
   {
-    id: '1',
-    name: 'Mauro Alborghette Filho',
-    phone: '5519996032069',
-    specialty: 'Operador de Munck',
-    avatar: '👷🏾‍♂️',
-    availability: 'Disponível agora',
+    id: "1",
+    name: "Mauro Alborghette Filho",
+    phone: "5519996032069",
+    specialty: "Sócio Proprietário",
+    avatar: "👷🏾‍♂️",
+    availability: "Disponível agora",
   },
   {
-    id: '2',
-    name: 'Raphael Alborghette Pallini',
-    phone: '5519998392024',
-    specialty: 'Operador de Munck',
-    avatar: '👷🏻‍♂️',
-    availability: 'Disponível agora',
+    id: "2",
+    name: "Raphael Alborghette Pallini",
+    phone: "5519998392024",
+    specialty: "Sócio Proprietário",
+    avatar: "👷🏻‍♂️",
+    availability: "Disponível agora",
   },
 ];
 
@@ -53,7 +53,7 @@ export const OperatorSelector: React.FC<OperatorSelectorProps> = ({
 
   const handleOperatorClick = (operator: Operator) => {
     const whatsappUrl = `https://wa.me/${operator.phone}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
     setIsOpen(false);
   };
 
@@ -64,7 +64,9 @@ export const OperatorSelector: React.FC<OperatorSelectorProps> = ({
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-center">Escolha seu Operador</DialogTitle>
+          <DialogTitle className="text-center">
+            Escolha seu Operador
+          </DialogTitle>
         </DialogHeader>
 
         <div className="space-y-3">
@@ -85,13 +87,21 @@ export const OperatorSelector: React.FC<OperatorSelectorProps> = ({
                     <div className="flex items-center mb-1">
                       <h4 className="font-semibold text-sm">{operator.name}</h4>
                     </div>
-                    <p className="text-xs text-muted-foreground mb-1">{operator.specialty}</p>
+                    <p className="text-xs text-muted-foreground mb-1">
+                      {operator.specialty}
+                    </p>
                     <div className="flex items-center gap-1">
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-xs text-green-600">{operator.availability}</span>
+                      <span className="text-xs text-green-600">
+                        {operator.availability}
+                      </span>
                     </div>
                   </div>
-                  <Button size="sm" variant="outline" className="operator-message-btn">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="operator-message-btn"
+                  >
                     <MessageCircle className="w-4 h-4" />
                   </Button>
                 </div>
