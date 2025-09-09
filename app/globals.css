@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 /* Variante dark baseada em classe .dark */
 @custom-variant dark (&:is(.dark *));
@@ -335,7 +335,11 @@
 }
 
 .section-gradient {
-  background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--background)),
+    hsl(var(--muted))
+  );
 }
 
 /* Gradients utilitários para Tailwind v4 */
@@ -346,7 +350,11 @@
   background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
 }
 .gradient-section {
-  background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--background)),
+    hsl(var(--muted))
+  );
 }
 
 .bg-accent-light {
@@ -356,7 +364,11 @@
 
 /* Industrial gradient overlays */
 .hero-overlay {
-  background: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--primary) / 0.6));
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.8),
+    hsl(var(--primary) / 0.6)
+  );
 }
 
 /* Animation utilities */
@@ -382,10 +394,15 @@
 }
 
 .cta-glow::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, transparent, hsl(var(--accent) / 0.2), transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    hsl(var(--accent) / 0.2),
+    transparent
+  );
   transform: translateX(-100%);
   transition: transform 0.6s;
 }
@@ -401,13 +418,18 @@
 }
 
 .industrial-divider::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)), hsl(var(--accent)));
+  background: linear-gradient(
+    90deg,
+    hsl(var(--accent)),
+    hsl(var(--primary)),
+    hsl(var(--accent))
+  );
 }
 
 @keyframes fadeInUp {
@@ -458,4 +480,7 @@
 
 .bg-primary\/10 {
   background-color: hsl(var(--primary) / 0.1) !important;
+}
+.bg-background-95 {
+  background-color: hsl(var(--background) / 0.95) !important;
 }

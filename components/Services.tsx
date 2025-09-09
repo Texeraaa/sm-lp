@@ -1,66 +1,63 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Truck, Package, ShipWheel, ArrowRight } from 'lucide-react';
-import { OperatorSelector } from './OperatorSelector';
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Truck, Package, ShipWheel, ArrowRight } from "lucide-react";
+import { OperatorSelector } from "./OperatorSelector";
 
 export default function Services() {
   const services = [
     {
       icon: Truck,
-      title: 'Guindastes Munck',
+      title: "Guindastes Munck",
       description:
-        'Locação de guindastes automotivos para movimentação de cargas pesadas em canteiros de obra e indústrias.',
+        "Locação de guindastes automotivos para movimentação de cargas pesadas em canteiros de obra e indústrias.",
       features: [
-        'Capacidade: 12 toneladas a 4 metros',
-        'Alcance: 27 metros com 500kg',
-        'Operadores certificados',
-        'Atendimento 24 horas',
+        "Capacidade: 12 toneladas a 4 metros",
+        "Alcance: 27 metros com 500kg",
+        "Operadores certificados",
+        "Atendimento 24 horas",
       ],
-      highlight: 'Mais Procurado',
+      highlight: "Mais Procurado",
     },
     {
       icon: Package,
-      title: 'Empilhadeiras',
+      title: "Empilhadeiras",
       description:
-        'Aluguel de empilhadeiras a combustão para movimentação eficiente em armazéns e fábricas.',
-      features: [
-        'Modelos de 2,5, 4 e 7 toneladas',
-        'Todas a combustão',
-        'Treinamento de operadores',
-        'Manutenção inclusa',
-      ],
+        "Aluguel de empilhadeiras para movimentação eficiente em armazéns e fábricas.",
+      features: ["Modelos de 2.5, 4 e 7 toneladas"],
     },
     {
       icon: ShipWheel,
-      title: 'Conjunto de Remoção',
+      title: "Conjunto de Remoção",
       description:
-        'Serviço especializado de remoção com macaco hidráulico para máquinas e equipamentos pesados.',
+        "Serviço especializado de remoção com macaco hidráulico para máquinas e equipamentos pesados.",
       features: [
-        'Macaco hidráulico especializado',
-        'Remoção segura de equipamentos',
-        'Operadores especializados',
-        'Equipamentos certificados',
+        "Remoção segura de equipamentos",
+        "Operadores especializados",
+        "Equipamentos certificados",
       ],
     },
     {
       icon: Truck,
-      title: 'Transporte de Máquinas Pesadas',
+      title: "Transporte de Máquinas Pesadas",
       description:
-        'Transporte especializado de máquinas e equipamentos industriais com segurança e agilidade.',
-      features: [
-        'Carretas especializadas',
-        'Escolta quando necessário',
-        'Seguro total da carga',
-        'Logística personalizada',
-      ],
+        "Transporte especializado de máquinas e equipamentos industriais com segurança e agilidade.",
+      features: [],
     },
   ];
 
   const handleWhatsAppClick = (service: string) => {
-    const message = encodeURIComponent(`Olá! Gostaria de solicitar um orçamento para ${service}.`);
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    const message = encodeURIComponent(
+      `Olá! Gostaria de solicitar um orçamento para ${service}.`,
+    );
+    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
   };
 
   return (
@@ -71,8 +68,8 @@ export default function Services() {
             Nossos Serviços
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Oferecemos soluções completas em locação de máquinas pesadas, com qualidade e segurança
-            para sua empresa.
+            Oferecemos soluções completas em locação de máquinas pesadas, com
+            qualidade e segurança para sua empresa.
           </p>
         </div>
 
@@ -129,13 +126,13 @@ export default function Services() {
 
         <div className="text-center mt-12">
           <p className="font-body text-muted-foreground mb-6">
-            Precisa de uma solução personalizada? Nossa equipe está pronta para atender suas
-            necessidades específicas.
+            Precisa de uma solução personalizada? Nossa equipe está pronta para
+            atender suas necessidades específicas.
           </p>
           <Button
             variant="cta"
             size="lg"
-            onClick={() => handleWhatsAppClick('consultoria personalizada')}
+            onClick={() => handleWhatsAppClick("consultoria personalizada")}
           >
             Falar com Especialista
           </Button>
