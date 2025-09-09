@@ -79,7 +79,7 @@ export const OperatorSelector: React.FC<OperatorSelectorProps> = ({
           {operators.map((operator) => (
             <Card
               key={operator.id}
-              className="cursor-pointer hover:shadow-md transition-all duration-200 hover:border-primary/50"
+              className="cursor-pointer hover:shadow-md transition-all duration-200 hover:border-primary-50 py-4"
               onClick={() => handleOperatorClick(operator)}
             >
               <CardContent className="p-2">

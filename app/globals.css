@@ -484,3 +484,7 @@
 .bg-background-95 {
   background-color: hsl(var(--background) / 0.95) !important;
 }
+
+.border-primary-50 {
+  border-color: hsl(var(--primary) / 0.5) !important;
+}
