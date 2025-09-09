@@ -1,32 +1,33 @@
-'use client'
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Award, MessageCircle } from "lucide-react";
-import heroImage from "@/app/assets/images/empilhadeira.jpeg";
-import { OperatorSelector } from "./OperatorSelector";
-
+'use client';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Shield, Clock, Award, MessageCircle } from 'lucide-react';
+import heroImage from '@/app/assets/images/empilhadeira.jpeg';
+import { OperatorSelector } from './OperatorSelector';
 
 export default function Hero() {
-      const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para locação de máquinas.");
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent(
+      'Olá! Gostaria de solicitar um orçamento para locação de máquinas.'
+    );
+    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
   };
 
   const features = [
-    { icon: Shield, text: "Segurança Garantida" },
-    { icon: Clock, text: "Disponibilidade 24h" },
-    { icon: Award, text: "25+ Anos de Experiência" },
+    { icon: Shield, text: 'Segurança Garantida' },
+    { icon: Clock, text: 'Disponibilidade 24h' },
+    { icon: Award, text: '25+ Anos de Experiência' },
   ];
-    
-    return(
-        <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
+
+  return (
+    <section id="inicio" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
-       <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-    style={{ backgroundImage: `url(${heroImage.src})` }}
-  >
-  <div className="absolute inset-0 bg-blue-600/40 backdrop-blur-xs" />
-    <div className="hero-overlay absolute inset-0" />
-  </div>
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImage.src})` }}
+      >
+        <div className="absolute inset-0 bg-blue-600/40 backdrop-blur-xs" />
+        <div className="hero-overlay absolute inset-0" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
@@ -35,36 +36,36 @@ export default function Hero() {
           <div className="text-center lg:text-left">
             <div className="fade-in-up">
               <h1 className="font-heading font-black text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-                Pega leve,<br />
-                <span className="text-accent">deixa o pesado</span><br />
+                Pega leve,
+                <br />
+                <span className="text-accent">deixa o pesado</span>
+                <br />
                 com a gente.
               </h1>
             </div>
-            
+
             <div className="fade-in-up" style={{ animationDelay: '0.2s' }}>
               <p className="font-body text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                Locação de guindastes Munck, empilhadeiras e transportes pesados. 
-                Soluções industriais confiáveis para sua empresa.
+                Locação de guindastes Munck, empilhadeiras e transportes pesados. Soluções
+                industriais confiáveis para sua empresa.
               </p>
             </div>
 
             <div className="fade-in-up" style={{ animationDelay: '0.4s' }}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-                 <OperatorSelector message="Olá! Gostaria de solicitar um orçamento para locação de máquinas.">
-                  <Button 
-                    variant="hero" 
-                    size="lg" 
-                    className="px-8 py-4"
-                  >
+                <OperatorSelector message="Olá! Gostaria de solicitar um orçamento para locação de máquinas.">
+                  <Button variant="hero" size="lg" className="px-8 py-4">
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Solicitar Orçamento
                   </Button>
                 </OperatorSelector>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="lg"
                   className="px-8 py-4 border-white text-white hover:bg-white hover:text-primary"
-                  onClick={() => document.querySelector('#servicos')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() =>
+                    document.querySelector('#servicos')?.scrollIntoView({ behavior: 'smooth' })
+                  }
                 >
                   Nossos Serviços
                 </Button>
@@ -96,7 +97,8 @@ export default function Hero() {
                     Atendimento Especializado
                   </h3>
                   <p className="font-body text-white/80 mb-6">
-                    Nossa equipe está pronta para atender suas necessidades com agilidade e profissionalismo.
+                    Nossa equipe está pronta para atender suas necessidades com agilidade e
+                    profissionalismo.
                   </p>
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
@@ -122,5 +124,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-    )
+  );
 }

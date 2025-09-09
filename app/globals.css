@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 /* Variante dark baseada em classe .dark */
 @custom-variant dark (&:is(.dark *));
@@ -77,7 +77,7 @@
   --popover-foreground: 220 15% 12%;
 
   /* BRAND */
-  --primary: 221 83% 32%;          /* Blue #1E3A8A */
+  --primary: 221 83% 32%; /* Blue #1E3A8A */
   --primary-foreground: 0 0% 100%;
 
   --secondary: 220 14% 96%;
@@ -86,7 +86,7 @@
   --muted: 220 14% 95%;
   --muted-foreground: 220 8% 46%;
 
-  --accent: 45 85% 52%;            /* Golden #D4AF37 */
+  --accent: 45 85% 52%; /* Golden #D4AF37 */
   --accent-foreground: 220 15% 12%;
 
   --destructive: 0 84% 60%;
@@ -157,73 +157,182 @@
 
 /* ===== Base ===== */
 @layer base {
-  * { @apply border-border outline-ring/50; }
-  body { @apply bg-background text-foreground antialiased; }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
 }
 /* ===== Tailwind v4: utilitários customizados para tokens ===== */
-.text-accent { color: hsl(var(--accent)); }
-.text-accent-foreground { color: hsl(var(--accent-foreground)); }
-.bg-accent { background-color: hsl(var(--accent)); }
-.bg-accent-foreground { background-color: hsl(var(--accent-foreground)); }
-.border-accent { border-color: hsl(var(--accent)); }
+.text-accent {
+  color: hsl(var(--accent));
+}
+.text-accent-foreground {
+  color: hsl(var(--accent-foreground));
+}
+.bg-accent {
+  background-color: hsl(var(--accent));
+}
+.bg-accent-foreground {
+  background-color: hsl(var(--accent-foreground));
+}
+.border-accent {
+  border-color: hsl(var(--accent));
+}
 
 /* ===== Utilitários para todos os tokens e variantes ===== */
-.text-primary { color: hsl(var(--primary)); }
-.text-primary-foreground { color: hsl(var(--primary-foreground)); }
-.text-primary-hover { color: hsl(var(--primary-hover)); }
-.bg-primary { background-color: hsl(var(--primary)); }
-.bg-primary-foreground { background-color: hsl(var(--primary-foreground)); }
-.bg-primary-hover { background-color: hsl(var(--primary-hover)); }
-.border-primary { border-color: hsl(var(--primary)); }
+.text-primary {
+  color: hsl(var(--primary));
+}
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+.text-primary-hover {
+  color: hsl(var(--primary-hover));
+}
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+.bg-primary-foreground {
+  background-color: hsl(var(--primary-foreground));
+}
+.bg-primary-hover {
+  background-color: hsl(var(--primary-hover));
+}
+.border-primary {
+  border-color: hsl(var(--primary));
+}
 
-.text-secondary { color: hsl(var(--secondary)); }
-.text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
-.bg-secondary { background-color: hsl(var(--secondary)); }
-.bg-secondary-foreground { background-color: hsl(var(--secondary-foreground)); }
-.border-secondary { border-color: hsl(var(--secondary)); }
+.text-secondary {
+  color: hsl(var(--secondary));
+}
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
+}
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+.bg-secondary-foreground {
+  background-color: hsl(var(--secondary-foreground));
+}
+.border-secondary {
+  border-color: hsl(var(--secondary));
+}
 
-.text-destructive { color: hsl(var(--destructive)); }
-.text-destructive-foreground { color: hsl(var(--destructive-foreground)); }
-.bg-destructive { background-color: hsl(var(--destructive)); }
-.bg-destructive-foreground { background-color: hsl(var(--destructive-foreground)); }
-.border-destructive { border-color: hsl(var(--destructive)); }
+.text-destructive {
+  color: hsl(var(--destructive));
+}
+.text-destructive-foreground {
+  color: hsl(var(--destructive-foreground));
+}
+.bg-destructive {
+  background-color: hsl(var(--destructive));
+}
+.bg-destructive-foreground {
+  background-color: hsl(var(--destructive-foreground));
+}
+.border-destructive {
+  border-color: hsl(var(--destructive));
+}
 
-.text-muted { color: hsl(var(--muted)); }
-.text-muted-foreground { color: hsl(var(--muted-foreground)); }
-.bg-muted { background-color: hsl(var(--muted)); }
-.bg-muted-foreground { background-color: hsl(var(--muted-foreground)); }
-.border-muted { border-color: hsl(var(--muted)); }
+.text-muted {
+  color: hsl(var(--muted));
+}
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
+.bg-muted-foreground {
+  background-color: hsl(var(--muted-foreground));
+}
+.border-muted {
+  border-color: hsl(var(--muted));
+}
 
-.text-accent-hover { color: hsl(var(--accent-hover)); }
-.bg-accent-hover { background-color: hsl(var(--accent-hover)); }
+.text-accent-hover {
+  color: hsl(var(--accent-hover));
+}
+.bg-accent-hover {
+  background-color: hsl(var(--accent-hover));
+}
 
-.text-popover { color: hsl(var(--popover)); }
-.text-popover-foreground { color: hsl(var(--popover-foreground)); }
-.bg-popover { background-color: hsl(var(--popover)); }
-.bg-popover-foreground { background-color: hsl(var(--popover-foreground)); }
-.border-popover { border-color: hsl(var(--popover)); }
+.text-popover {
+  color: hsl(var(--popover));
+}
+.text-popover-foreground {
+  color: hsl(var(--popover-foreground));
+}
+.bg-popover {
+  background-color: hsl(var(--popover));
+}
+.bg-popover-foreground {
+  background-color: hsl(var(--popover-foreground));
+}
+.border-popover {
+  border-color: hsl(var(--popover));
+}
 
-.text-card { color: hsl(var(--card)); }
-.text-card-foreground { color: hsl(var(--card-foreground)); }
-.bg-card { background-color: hsl(var(--card)); }
-.bg-card-foreground { background-color: hsl(var(--card-foreground)); }
-.border-card { border-color: hsl(var(--card)); }
+.text-card {
+  color: hsl(var(--card));
+}
+.text-card-foreground {
+  color: hsl(var(--card-foreground));
+}
+.bg-card {
+  background-color: hsl(var(--card));
+}
+.bg-card-foreground {
+  background-color: hsl(var(--card-foreground));
+}
+.border-card {
+  border-color: hsl(var(--card));
+}
 
-.text-sidebar { color: hsl(var(--sidebar)); }
-.text-sidebar-foreground { color: hsl(var(--sidebar-foreground)); }
-.text-sidebar-primary { color: hsl(var(--sidebar-primary)); }
-.text-sidebar-primary-foreground { color: hsl(var(--sidebar-primary-foreground)); }
-.text-sidebar-accent { color: hsl(var(--sidebar-accent)); }
-.text-sidebar-accent-foreground { color: hsl(var(--sidebar-accent-foreground)); }
-.bg-sidebar { background-color: hsl(var(--sidebar)); }
-.bg-sidebar-foreground { background-color: hsl(var(--sidebar-foreground)); }
-.bg-sidebar-primary { background-color: hsl(var(--sidebar-primary)); }
-.bg-sidebar-primary-foreground { background-color: hsl(var(--sidebar-primary-foreground)); }
-.bg-sidebar-accent { background-color: hsl(var(--sidebar-accent)); }
-.bg-sidebar-accent-foreground { background-color: hsl(var(--sidebar-accent-foreground)); }
-.border-sidebar { border-color: hsl(var(--sidebar-border)); }
-.border-sidebar-ring { border-color: hsl(var(--sidebar-ring)); }
-
+.text-sidebar {
+  color: hsl(var(--sidebar));
+}
+.text-sidebar-foreground {
+  color: hsl(var(--sidebar-foreground));
+}
+.text-sidebar-primary {
+  color: hsl(var(--sidebar-primary));
+}
+.text-sidebar-primary-foreground {
+  color: hsl(var(--sidebar-primary-foreground));
+}
+.text-sidebar-accent {
+  color: hsl(var(--sidebar-accent));
+}
+.text-sidebar-accent-foreground {
+  color: hsl(var(--sidebar-accent-foreground));
+}
+.bg-sidebar {
+  background-color: hsl(var(--sidebar));
+}
+.bg-sidebar-foreground {
+  background-color: hsl(var(--sidebar-foreground));
+}
+.bg-sidebar-primary {
+  background-color: hsl(var(--sidebar-primary));
+}
+.bg-sidebar-primary-foreground {
+  background-color: hsl(var(--sidebar-primary-foreground));
+}
+.bg-sidebar-accent {
+  background-color: hsl(var(--sidebar-accent));
+}
+.bg-sidebar-accent-foreground {
+  background-color: hsl(var(--sidebar-accent-foreground));
+}
+.border-sidebar {
+  border-color: hsl(var(--sidebar-border));
+}
+.border-sidebar-ring {
+  border-color: hsl(var(--sidebar-ring));
+}
 
 .section-gradient {
   background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
@@ -241,7 +350,7 @@
 }
 
 .bg-accent-light {
-  background-color: hsl(var(--accent) / 0.10);
+  background-color: hsl(var(--accent) / 0.1);
 }
 /* ===== Compatibilidade com Tailwind v3: classes customizadas ===== */
 
@@ -323,7 +432,12 @@
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
   }
   body {
@@ -343,5 +457,5 @@
 }
 
 .bg-primary\/10 {
-  background-color: hsl(var(--primary) / 0.10) !important;
+  background-color: hsl(var(--primary) / 0.1) !important;
 }

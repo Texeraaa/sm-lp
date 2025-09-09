@@ -1,81 +1,85 @@
-'use client'
+'use client';
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Weight, Ruler, Gauge, Phone, Truck, Box, Star, CheckCircle } from "lucide-react";
-import Image from "next/image";
-import forkLiftImage from "@/app/assets/images/emp.jpeg";
-import craneTruckImage from "@/app/assets/images/muncks.jpeg";
-import { OperatorSelector } from "./OperatorSelector";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Weight, Ruler, Gauge, Phone, Truck, Box, Star, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
+import forkLiftImage from '@/app/assets/images/emp.jpeg';
+import craneTruckImage from '@/app/assets/images/muncks.jpeg';
+import { OperatorSelector } from './OperatorSelector';
 
 const FleetSection = () => {
   const heroEquipment = {
     id: 1,
-    category: "Guindastes Munck",
-    title: "Guindaste Munck 12T",
-  subtitle: "Nosso equipamento principal",
+    category: 'Guindastes Munck',
+    title: 'Guindaste Munck 12T',
+    subtitle: 'Nosso equipamento principal',
     image: craneTruckImage,
     specs: {
-      capacity: "12 toneladas",
-      reach: "27 metros",
-      rotation: "500kg no máximo"
+      capacity: '12 toneladas',
+      reach: '27 metros',
+      rotation: '500kg no máximo',
     },
-    highlights: ["4m a 12T", "27m a 500kg", "Operador Incluso"],
-    features: ["Operador Incluso", "Manutenção Garantida", "Disponível 24h"],
-    status: "Disponível",
-  // isPremium removido
+    highlights: ['4m a 12T', '27m a 500kg', 'Operador Incluso'],
+    features: ['Operador Incluso', 'Manutenção Garantida', 'Disponível 24h'],
+    status: 'Disponível',
+    // isPremium removido
   };
 
   const forklifts = [
     {
       id: 2,
-      category: "Empilhadeiras",
-      title: "Empilhadeira 2.5T",
+      category: 'Empilhadeiras',
+      title: 'Empilhadeira 2.5T',
       image: forkLiftImage,
       specs: {
-        capacity: "2,5 toneladas",
-        reach: "4.5 metros",
-        rotation: "Combustão"
+        capacity: '2,5 toneladas',
+        reach: '4.5 metros',
+        rotation: 'Combustão',
       },
-      features: ["Alta Performance", "Área Externa", "Longa Autonomia"],
-      status: "Disponível"
+      features: ['Alta Performance', 'Área Externa', 'Longa Autonomia'],
+      status: 'Disponível',
     },
     {
       id: 3,
-      category: "Empilhadeiras",
-      title: "Empilhadeira 4T",
+      category: 'Empilhadeiras',
+      title: 'Empilhadeira 4T',
       image: forkLiftImage,
       specs: {
-        capacity: "4 toneladas",
-        reach: "5 metros",
-        rotation: "Combustão"
+        capacity: '4 toneladas',
+        reach: '5 metros',
+        rotation: 'Combustão',
       },
-      features: ["Capacidade Intermediária", "Versatilidade", "Operação Confiável"],
-      status: "Disponível"
+      features: ['Capacidade Intermediária', 'Versatilidade', 'Operação Confiável'],
+      status: 'Disponível',
     },
     {
       id: 4,
-      category: "Empilhadeiras",
-      title: "Empilhadeira 7T",
+      category: 'Empilhadeiras',
+      title: 'Empilhadeira 7T',
       image: forkLiftImage,
       specs: {
-        capacity: "7 toneladas",
-        reach: "6 metros",
-        rotation: "Combustão"
+        capacity: '7 toneladas',
+        reach: '6 metros',
+        rotation: 'Combustão',
       },
-      features: ["Alta Capacidade", "Para Cargas Pesadas", "Máxima Eficiência"],
-      status: "Disponível"
-    }
+      features: ['Alta Capacidade', 'Para Cargas Pesadas', 'Máxima Eficiência'],
+      status: 'Disponível',
+    },
   ];
 
   const handleWhatsAppClick = (machine: string) => {
-    const message = encodeURIComponent(`Olá! Gostaria de saber mais sobre a locação do ${machine}.`);
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank");
+    const message = encodeURIComponent(
+      `Olá! Gostaria de saber mais sobre a locação do ${machine}.`
+    );
+    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
   };
 
   const getStatusColor = (status: string) => {
-    return status === "Disponível" ? "bg-green-100 text-green-800" : "bg-orange-100 text-orange-800";
+    return status === 'Disponível'
+      ? 'bg-green-100 text-green-800'
+      : 'bg-orange-100 text-orange-800';
   };
 
   return (
@@ -93,8 +97,8 @@ const FleetSection = () => {
             Nossa Frota
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Equipamentos modernos e bem conservados, prontos para atender suas necessidades
-            com segurança e eficiência.
+            Equipamentos modernos e bem conservados, prontos para atender suas necessidades com
+            segurança e eficiência.
           </p>
         </div>
 
@@ -104,11 +108,11 @@ const FleetSection = () => {
             <Truck className="w-6 h-6 text-primary mr-3" />
             <h3 className="font-heading font-bold text-2xl text-foreground">Guindastes Munck</h3>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <Card className="glass-card border-border/50 overflow-hidden group relative p-0">
               {/* ...premium badge removido... */}
-              
+
               {/* Status badge */}
               <div className="absolute top-6 right-6 z-20">
                 <Badge className="bg-green-500/90 text-white backdrop-blur-sm border-0">
@@ -120,7 +124,7 @@ const FleetSection = () => {
               <div className="grid md:grid-cols-2 gap-0">
                 {/* Image */}
                 <div className="relative h-80 md:h-96 m-0 p-0 overflow-hidden">
-                  <Image 
+                  <Image
                     src={heroEquipment.image}
                     alt={heroEquipment.title}
                     fill
@@ -133,7 +137,9 @@ const FleetSection = () => {
                 {/* Content */}
                 <div className="p-8 bg-gradient-to-br from-card to-card/80 backdrop-blur-sm">
                   <div className="mb-4">
-                    <p className="text-primary font-medium text-sm mb-1">{heroEquipment.subtitle}</p>
+                    <p className="text-primary font-medium text-sm mb-1">
+                      {heroEquipment.subtitle}
+                    </p>
                     <h4 className="font-heading font-bold text-3xl text-foreground mb-4">
                       {heroEquipment.title}
                     </h4>
@@ -155,7 +161,9 @@ const FleetSection = () => {
                     <div className="text-center">
                       <Weight className="w-6 h-6 text-primary mx-auto mb-2" />
                       <div className="font-body text-xs text-muted-foreground">Capacidade</div>
-                      <div className="font-heading font-semibold">{heroEquipment.specs.capacity}</div>
+                      <div className="font-heading font-semibold">
+                        {heroEquipment.specs.capacity}
+                      </div>
                     </div>
                     <div className="text-center">
                       <Ruler className="w-6 h-6 text-primary mx-auto mb-2" />
@@ -165,7 +173,9 @@ const FleetSection = () => {
                     <div className="text-center">
                       <Gauge className="w-6 h-6 text-primary mx-auto mb-2" />
                       <div className="font-body text-xs text-muted-foreground">Especial</div>
-                      <div className="font-heading font-semibold">{heroEquipment.specs.rotation}</div>
+                      <div className="font-heading font-semibold">
+                        {heroEquipment.specs.rotation}
+                      </div>
                     </div>
                   </div>
 
@@ -180,16 +190,17 @@ const FleetSection = () => {
                       ))}
                     </ul>
                   </div>
-                <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento para ${heroEquipment.title}.`}>
-                  <Button 
-                    variant="default"
-                    className="w-full group-hover:shadow-xl transition-all duration-300 mb-4"
+                  <OperatorSelector
+                    message={`Olá! Gostaria de solicitar um orçamento para ${heroEquipment.title}.`}
                   >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Solicitar Orçamento
-                  </Button>
-                </OperatorSelector>
-
+                    <Button
+                      variant="default"
+                      className="w-full group-hover:shadow-xl transition-all duration-300 mb-4"
+                    >
+                      <Phone className="w-5 h-5 mr-2" />
+                      Solicitar Orçamento
+                    </Button>
+                  </OperatorSelector>
                 </div>
               </div>
             </Card>
@@ -205,9 +216,12 @@ const FleetSection = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {forklifts.map((item) => (
-              <Card key={item.id} className="glass-card border-border/50 overflow-hidden group hover:shadow-xl transition-all duration-300 p-0">
+              <Card
+                key={item.id}
+                className="glass-card border-border/50 overflow-hidden group hover:shadow-xl transition-all duration-300 p-0"
+              >
                 <div className="relative h-48 m-0 p-0 overflow-hidden">
-                  <Image 
+                  <Image
                     src={item.image}
                     alt={item.title}
                     fill
@@ -240,7 +254,9 @@ const FleetSection = () => {
                     <div className="text-center bg-primary/5 rounded-lg p-3">
                       <Weight className="w-5 h-5 text-primary mx-auto mb-1" />
                       <div className="font-body text-xs text-muted-foreground">Capacidade</div>
-                      <div className="font-heading font-semibold text-sm">{item.specs.capacity}</div>
+                      <div className="font-heading font-semibold text-sm">
+                        {item.specs.capacity}
+                      </div>
                     </div>
                     <div className="text-center bg-primary/5 rounded-lg p-3">
                       <Ruler className="w-5 h-5 text-primary mx-auto mb-1" />
@@ -250,7 +266,9 @@ const FleetSection = () => {
                     <div className="text-center bg-primary/5 rounded-lg p-3">
                       <Gauge className="w-5 h-5 text-primary mx-auto mb-1" />
                       <div className="font-body text-xs text-muted-foreground">Tipo</div>
-                      <div className="font-heading font-semibold text-sm">{item.specs.rotation}</div>
+                      <div className="font-heading font-semibold text-sm">
+                        {item.specs.rotation}
+                      </div>
                     </div>
                   </div>
 
@@ -265,8 +283,10 @@ const FleetSection = () => {
                       ))}
                     </ul>
                   </div>
-                  <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento para ${item.title}.`}>
-                    <Button 
+                  <OperatorSelector
+                    message={`Olá! Gostaria de solicitar um orçamento para ${item.title}.`}
+                  >
+                    <Button
                       variant="default"
                       className="w-full group-hover:shadow-lg transition-all duration-300 mb-4"
                     >
@@ -284,27 +304,25 @@ const FleetSection = () => {
         <div className="text-center mt-16">
           <div className="glass-card border-border/50 rounded-3xl p-8 max-w-2xl mx-auto">
             <div className="mb-6">
-                <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-heading font-bold text-2xl mb-4">
-                Não encontrou o que precisa?
-              </h3>
+              <h3 className="font-heading font-bold text-2xl mb-4">Não encontrou o que precisa?</h3>
               <p className="font-body text-muted-foreground mb-6">
-                Nossa frota especializada está sempre pronta 
-                para atender suas necessidades com agilidade e qualidade.
+                Nossa frota especializada está sempre pronta para atender suas necessidades com
+                agilidade e qualidade.
               </p>
             </div>
-              <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento.`}>
-                <Button 
-                  variant="cta" 
-                  size="lg" 
-                  className="shadow-xl hover:shadow-2xl transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Solicitar Orçamento Personalizado
-                </Button>
-              </OperatorSelector>
+            <OperatorSelector message={`Olá! Gostaria de solicitar um orçamento.`}>
+              <Button
+                variant="cta"
+                size="lg"
+                className="shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Solicitar Orçamento Personalizado
+              </Button>
+            </OperatorSelector>
           </div>
         </div>
       </div>

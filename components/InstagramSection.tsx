@@ -1,7 +1,7 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
-import { Instagram } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { Instagram } from 'lucide-react';
 
 const InstagramSection = () => {
   const handleFollowInstagram = () => {
@@ -19,12 +19,10 @@ const InstagramSection = () => {
             </h2>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Veja nossos equipamentos em ação e acompanhe os projetos que realizamos diariamente. 
+            Veja nossos equipamentos em ação e acompanhe os projetos que realizamos diariamente.
             Máquinas potentes, equipe especializada e resultados de qualidade.
           </p>
         </div>
-
-        
 
         {/* Call to Action */}
         <div className="text-center">
@@ -34,15 +32,10 @@ const InstagramSection = () => {
               Siga a SM Locação no Instagram
             </h3>
             <p className="text-muted-foreground mb-6">
-              Acompanhe diariamente nossos equipamentos em ação, dicas de segurança 
-              e novidades do setor de locação de máquinas.
+              Acompanhe diariamente nossos equipamentos em ação, dicas de segurança e novidades do
+              setor de locação de máquinas.
             </p>
-            <Button 
-              variant="cta" 
-              size="lg"
-              onClick={handleFollowInstagram}
-              className="gap-2"
-            >
+            <Button variant="cta" size="lg" onClick={handleFollowInstagram} className="gap-2">
               <Instagram className="h-5 w-5" />
               Seguir @sm.locacao
             </Button>

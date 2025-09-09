@@ -114,7 +114,7 @@ Gostaria de ser atendido pelos operadores Mauro ou Raphael.
     const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
 
-  toast('Sua mensagem foi preparada e você será redirecionado para o WhatsApp.');
+    toast('Sua mensagem foi preparada e você será redirecionado para o WhatsApp.');
 
     // Reset form
     setFormData({
